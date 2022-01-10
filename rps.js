@@ -1,0 +1,34 @@
+function computerPlay(){
+    let choices = ["ROCK", "PAPER", "SCISSORS"]
+    let randomIndex = Math.floor(Math.random()*choices.length);
+    return choices[randomIndex];
+}
+
+let computerSelection = computerPlay();
+let playerSelection = prompt("Enter Rock, Paper, or Scissors").toUpperCase();
+playerScore = 0
+computerScore = 0
+
+function playRound(playerSelection, computerSelection){
+        if (playerSelection === computerSelection) {
+          return("Tie!")
+        }
+        if (
+          (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
+          (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
+          (playerSelection === 'PAPER' && computerSelection === 'ROCK')
+        ) {
+          playerScore++
+          return ("Player wins!")
+        }
+        if (
+          (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
+          (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
+          (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+        ) {
+          computerScore++
+          return ("Computer wins!")
+        } 
+
+}
+console.log(playRound(playerSelection, computerSelection));
