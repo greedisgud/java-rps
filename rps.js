@@ -8,6 +8,7 @@ function computerPlay() {
         return "SCISSORS";
     }
 }
+
 let playerScore = 0;
 let computerScore = 0;
 
