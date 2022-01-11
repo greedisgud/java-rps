@@ -6,8 +6,8 @@ function computerPlay(){
 
 let computerSelection = computerPlay();
 let playerSelection = prompt("Enter Rock, Paper, or Scissors").toUpperCase();
-playerScore = 0
-computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(playerSelection, computerSelection){
         if (playerSelection === computerSelection) {
@@ -39,7 +39,6 @@ function game(){
 console.log(playRound(playerSelection, computerSelection));
 console.log(playerScore);
 console.log(computerScore);
-console.log(game());
 
 
 
