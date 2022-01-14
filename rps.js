@@ -8,10 +8,22 @@ let rockBtn = document.getElementById("rock");
 let paperBtn = document.getElementById("paper");
 let scissorsBtn = document.getElementById("scissors");
 
+function computerPlay() {
+    let random = Math.random();
+    if (random <= 0.3333) {
+        return "PAPER";
+    } else if (random >= 0.6666) {
+        return "ROCK";
+    } else {
+        return "SCISSORS";
+    }
+}
+
 function win(playerSelection, computerSelection){
     playerScore ++;
     playerScore_span.innerHTML = playerScore;
-    result_div.innerHTML = (`${playerSelection} beats ${computerSelection} you win!`)
+    result_div.innerHTML = (`${playerSelection} beats ${computerSelection} you win!`);
+    document.getElementById(playerSelection).classList.add("green-glow");
 }
 
 function lose(playerSelection, computerSelection){
@@ -65,16 +77,7 @@ scissorsBtn.addEventListener('click', function(){
 btnActions();
 
 
-function computerPlay() {
-    let random = Math.random();
-    if (random <= 0.3333) {
-        return "PAPER";
-    } else if (random >= 0.6666) {
-        return "ROCK";
-    } else {
-        return "SCISSORS";
-    }
-}
+
 
 
 
