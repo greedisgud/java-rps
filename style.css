@@ -82,3 +82,8 @@ header{
     text-align: center;
     margin: 30px;
 }
+
+.button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
